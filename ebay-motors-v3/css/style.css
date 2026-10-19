@@ -1,0 +1,266 @@
+/* =====================================================================
+   3S ONLINE - eBay Motors Template v3
+   Design matched to a teal two-column motors layout: hero banner,
+   pill navigation, left sidebar (categories / why buy / promo boxes),
+   centered title, hover gallery, green-labeled description rows,
+   dark fitment table, tab row, dark footer.
+   External stylesheet - served via jsDelivr from the GitHub repo.
+   Pure CSS interactivity (no JavaScript): hover gallery + :checked tabs.
+   ===================================================================== */
+
+/* ---------- Base ---------- */
+.t3sv3-wrap{
+  max-width:960px;
+  margin:0 auto;
+  background:#ffffff;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#222222;
+  font-size:14px;
+  line-height:1.6;
+}
+.t3sv3-wrap img{border:0;}
+
+/* ---------- Hero banner ---------- */
+.t3sv3-hero{
+  background:linear-gradient(180deg,#8fd0ea 0%,#3d9dc4 55%,#166e92 100%);
+  padding:26px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:14px;
+  border-radius:6px 6px 0 0;
+}
+.t3sv3-hero-title{
+  color:#ffffff;
+  font-size:44px;
+  font-weight:bold;
+  letter-spacing:2px;
+  margin:0;
+  text-shadow:2px 2px 0 #0d4a61,4px 4px 6px rgba(0,0,0,0.35);
+}
+.t3sv3-hero-sub{
+  color:#eaf6fb;
+  font-size:15px;
+  font-weight:bold;
+  letter-spacing:3px;
+  margin:4px 0 0 2px;
+}
+.t3sv3-hero-badges{display:flex;gap:12px;flex-wrap:wrap;}
+.t3sv3-badge{
+  background:#ffffff;
+  border-radius:8px;
+  padding:10px 14px;
+  text-align:center;
+  font-size:11px;
+  font-weight:bold;
+  color:#0e86a0;
+  line-height:1.5;
+  box-shadow:0 2px 5px rgba(0,0,0,0.25);
+}
+.t3sv3-badge.seal{
+  background:radial-gradient(circle,#e0342b 0%,#a3130b 70%);
+  color:#ffffff;
+  border-radius:50%;
+  width:104px;
+  height:104px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  line-height:1.4;
+  padding:8px;
+  box-sizing:border-box;
+}
+
+/* ---------- Pill navigation ---------- */
+.t3sv3-nav{
+  background:#f2f5f7;
+  padding:12px 10px;
+  text-align:center;
+  border-bottom:1px solid #dfe5e9;
+}
+.t3sv3-nav a{
+  display:inline-block;
+  background:#0e86a0;
+  color:#ffffff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:bold;
+  padding:9px 20px;
+  margin:4px 5px;
+  border-radius:20px;
+}
+.t3sv3-nav a:hover{background:#0b6b80;}
+
+/* ---------- Two columns ---------- */
+.t3sv3-cols{display:flex;gap:0;align-items:stretch;}
+.t3sv3-sidebar{width:215px;flex:0 0 215px;background:#fbfcfd;padding:14px 12px;}
+.t3sv3-main{flex:1;min-width:0;padding:16px 20px;}
+
+/* ---------- Sidebar boxes ---------- */
+.t3sv3-sidebox{border:1px solid #d7dde2;border-radius:4px;margin-bottom:16px;background:#ffffff;}
+.t3sv3-sidebox-head{
+  background:#0e86a0;
+  color:#ffffff;
+  font-size:13px;
+  font-weight:bold;
+  padding:9px 12px;
+  border-radius:3px 3px 0 0;
+}
+.t3sv3-catlist{list-style:none;margin:0;padding:6px 12px;}
+.t3sv3-catlist li{border-bottom:1px dotted #cccccc;}
+.t3sv3-catlist li:last-child{border-bottom:none;}
+.t3sv3-catlist a{
+  display:block;
+  color:#555555;
+  text-decoration:none;
+  font-size:12px;
+  padding:7px 0;
+}
+.t3sv3-catlist a:hover{color:#0e86a0;}
+.t3sv3-catlist a::before{content:"\25B8  ";color:#0e86a0;font-weight:bold;}
+.t3sv3-why{list-style:none;margin:0;padding:8px 12px;}
+.t3sv3-why li{font-size:12px;color:#333333;padding:6px 0;line-height:1.5;}
+.t3sv3-why li::before{content:"\2714  ";color:#2e8b2e;font-weight:bold;}
+.t3sv3-why strong{display:block;color:#111111;}
+
+/* Sidebar promo boxes (pure CSS, replace banner graphics) */
+.t3sv3-promo{border-radius:6px;padding:14px 10px;text-align:center;margin-bottom:12px;font-weight:bold;}
+.t3sv3-promo.moneyback{background:linear-gradient(135deg,#1a1a1a 0%,#0e86a0 60%,#f5a623 130%);color:#ffffff;font-size:13px;line-height:1.6;}
+.t3sv3-promo.pay{background:#ffffff;border:1px solid #d7dde2;font-size:11px;color:#555555;}
+.t3sv3-promo.pay span{display:inline-block;background:#eef1f4;border-radius:4px;padding:4px 8px;margin:3px;font-style:italic;font-weight:bold;color:#003087;}
+.t3sv3-promo.shipping{background:linear-gradient(180deg,#2b9fd8 0%,#166e92 100%);color:#ffffff;font-size:14px;line-height:1.7;}
+.t3sv3-promo.seal{background:#ffffff;border:2px solid #0e86a0;}
+.t3sv3-promo.seal .t3sv3-rosette{
+  display:inline-block;background:radial-gradient(circle,#2b9fd8 0%,#166e92 75%);
+  color:#ffffff;border-radius:50%;width:110px;height:110px;
+  font-size:11px;line-height:1.5;padding:22px 10px;box-sizing:border-box;
+}
+
+/* ---------- Title ---------- */
+.t3sv3-title{
+  color:#0e86a0;
+  font-size:22px;
+  font-weight:bold;
+  text-align:center;
+  margin:6px 0 14px 0;
+  line-height:1.35;
+}
+
+/* ---------- Hover gallery ---------- */
+.t3sv3-gallery{position:relative;max-width:560px;margin:0 auto;}
+.t3sv3-g-main{border:1px solid #dddddd;border-radius:6px;overflow:hidden;background:#fafafa;}
+.t3sv3-g-main img{width:100%;height:auto;display:block;}
+.t3sv3-g-thumbs{display:flex;gap:8px;margin-top:8px;justify-content:center;}
+.t3sv3-g-thumb{width:90px;}
+.t3sv3-g-thumb img{width:100%;height:auto;display:block;border:1px solid #dddddd;border-radius:4px;cursor:pointer;}
+.t3sv3-g-thumb:hover img{border-color:#0e86a0;}
+.t3sv3-g-thumb .t3sv3-zoom{display:none;}
+.t3sv3-g-thumb:hover .t3sv3-zoom{display:block;position:absolute;top:0;left:0;width:100%;z-index:5;}
+.t3sv3-g-thumb:hover .t3sv3-zoom img{width:100%;height:auto;border:1px solid #dddddd;border-radius:6px;}
+
+/* ---------- Section bar ---------- */
+.t3sv3-secbar{
+  background:linear-gradient(180deg,#f4f4f4 0%,#e4e4e4 100%);
+  border:1px solid #d5d5d5;
+  border-radius:4px;
+  color:#0e86a0;
+  font-size:16px;
+  font-weight:bold;
+  padding:10px 14px;
+  margin:22px 0 12px 0;
+}
+
+/* ---------- Description attribute rows ---------- */
+.t3sv3-attr{margin:0 0 8px 0;font-size:14px;}
+.t3sv3-attr .t3sv3-alabel{color:#2e8b2e;font-weight:bold;}
+.t3sv3-attr .t3sv3-avalue{color:#111111;}
+.t3sv3-attr .t3sv3-avalue.red{color:#cc0000;font-weight:bold;}
+
+/* ---------- Fitment table ---------- */
+.t3sv3-fitlabel{color:#2e8b2e;font-weight:bold;font-size:14px;margin:18px 0 8px 0;}
+.t3sv3-fittable{width:100%;border-collapse:collapse;font-size:12px;}
+.t3sv3-fittable th{
+  background:#2b2b2b;
+  color:#f5a623;
+  font-weight:bold;
+  text-align:center;
+  padding:9px 6px;
+  border:1px solid #555555;
+  font-size:12px;
+}
+.t3sv3-fittable td{
+  border:1px solid #cccccc;
+  padding:7px 6px;
+  text-align:center;
+  color:#111111;
+  background:#ffffff;
+}
+.t3sv3-fittable tr:nth-child(even) td{background:#f7f7f7;}
+
+/* ---------- Spec table ---------- */
+.t3sv3-spec{width:100%;border-collapse:collapse;font-size:13px;}
+.t3sv3-spec td{border:1px solid #cccccc;padding:8px 10px;}
+.t3sv3-spec td:first-child{background:#efefef;font-weight:bold;color:#111111;width:42%;}
+.t3sv3-spec td:last-child{background:#ffffff;}
+
+/* ---------- Tab row (CSS only) ---------- */
+.t3sv3-tabs{margin:24px 0 6px 0;}
+.t3sv3-tabrow{text-align:left;}
+.t3sv3-tab-label{
+  display:inline-block;
+  background:#0e86a0;
+  color:#ffffff;
+  font-size:13px;
+  font-weight:bold;
+  padding:10px 18px;
+  margin-right:4px;
+  border-radius:8px 8px 0 0;
+  cursor:pointer;
+}
+.t3sv3-tab-body{display:none;}
+.t3sv3-tab-bodies{border:1px solid #cccccc;border-radius:0 4px 4px 4px;padding:16px;font-size:14px;line-height:1.7;background:#ffffff;}
+.t3sv3-tab-bodies ul{margin:0;padding-left:20px;line-height:1.9;}
+.t3sv3-tab-bodies p{margin:0 0 10px 0;}
+#t3sv3-tab-ship:checked ~ .t3sv3-tab-bodies .t3sv3-body-ship,
+#t3sv3-tab-pay:checked ~ .t3sv3-tab-bodies .t3sv3-body-pay,
+#t3sv3-tab-terms:checked ~ .t3sv3-tab-bodies .t3sv3-body-terms,
+#t3sv3-tab-about:checked ~ .t3sv3-tab-bodies .t3sv3-body-about,
+#t3sv3-tab-contact:checked ~ .t3sv3-tab-bodies .t3sv3-body-contact{display:block;}
+#t3sv3-tab-ship:checked ~ .t3sv3-tabrow label[for="t3sv3-tab-ship"],
+#t3sv3-tab-pay:checked ~ .t3sv3-tabrow label[for="t3sv3-tab-pay"],
+#t3sv3-tab-terms:checked ~ .t3sv3-tabrow label[for="t3sv3-tab-terms"],
+#t3sv3-tab-about:checked ~ .t3sv3-tabrow label[for="t3sv3-tab-about"],
+#t3sv3-tab-contact:checked ~ .t3sv3-tabrow label[for="t3sv3-tab-contact"]{background:#2b2b2b;}
+
+/* ---------- Footer ---------- */
+.t3sv3-footer{
+  background:linear-gradient(180deg,#3a3f44 0%,#232629 100%);
+  color:#ffffff;
+  padding:18px 24px;
+  margin-top:26px;
+  border-radius:0 0 6px 6px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.t3sv3-footer p{margin:0;font-size:13px;line-height:1.7;}
+.t3sv3-payicons span{
+  display:inline-block;background:#ffffff;color:#222222;font-size:11px;font-weight:bold;
+  border-radius:4px;padding:5px 10px;margin:2px;
+}
+.t3sv3-payicons .t3sv3-lock{background:#2e8b2e;color:#ffffff;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:720px){
+  .t3sv3-cols{flex-direction:column;}
+  .t3sv3-main{order:-1;}
+  .t3sv3-sidebar{width:auto;flex:1 1 auto;}
+  .t3sv3-hero-title{font-size:32px;}
+  .t3sv3-title{font-size:18px;}
+  .t3sv3-fittable{font-size:11px;}
+  .t3sv3-tab-label{padding:8px 10px;font-size:12px;margin-bottom:4px;border-radius:6px;}
+}

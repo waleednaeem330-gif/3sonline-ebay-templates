@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3S ONLINE - eBay Motors Template v3</title>
+<!--
+  =====================================================================
+  3S ONLINE - eBay Motors Template v3 (external stylesheet version)
+  Two-column motors design: hero banner, pill nav, left sidebar,
+  hover gallery, description rows, fitment table, tab row, dark footer.
+  =====================================================================
+  SETUP:
+  1. Files are hosted at https://github.com/waleednaeem330-gif/3sonline-ebay-templates
+     and the stylesheet is served live via jsDelivr (link tag below).
+  2. For MIP feed listings, upload this HTML via MIP GUI > Description
+     Templates (or SFTP /store/lookup/template) BEFORE the feed, then set
+     TemplateName=template.html in the feed row and fill CustomFields:
+       CustomFields=Brand=Apec Blue|MPN=PD3005|EAN=5028906056469|Position=Rear Axle|Condition=Brand New|Width=87 mm|Height=53 mm|Thickness=17 mm|BrakeSystem=TRW|WearIndicator=Not prepared|InspectionTag=90R-02A01400/42123|OENumbers=191615415A, 191615415D, 191698451A, 1H0615415|Warranty=25-month / 25,000-mile|Fitment=See the compatibility checker on this listing|Image1=https://...|Image2=https://...|Image3=https://...|AboutText=Your store blurb here
+     Pipe character separates keys (no spaces); commas separate multi-values.
+  3. Merge fields only auto-fill through the MIP feed workflow. Pasted
+     manually into Seller Hub, the ${...} codes show as plain text.
+
+  Interactivity is pure CSS (hover gallery + :checked tabs).
+  No active content of any kind. All URLs must be HTTPS.
+  =====================================================================
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/waleednaeem330-gif/3sonline-ebay-templates@main/ebay-motors-v3/css/style.css">
+</head>
+<body style="margin:0;padding:0;background:#eef1f4;">
+
+<div class="t3sv3-wrap">
+
+  <!-- ===== HERO BANNER ===== -->
+  <div class="t3sv3-hero">
+    <div>
+      <p class="t3sv3-hero-title">3S ONLINE</p>
+      <p class="t3sv3-hero-sub">BENEFIT TO THE CUSTOMER</p>
+    </div>
+    <div class="t3sv3-hero-badges">
+      <div class="t3sv3-badge">SAFE<br>PAYMENT<br>Buyer Protection</div>
+      <div class="t3sv3-badge seal">TOP QUALITY<br>100%<br>SATISFACTION</div>
+    </div>
+  </div>
+
+  <!-- ===== PILL NAVIGATION ===== -->
+  <!-- EDIT: point these at your own store URLs -->
+  <div class="t3sv3-nav">
+    <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Store Home</a>
+    <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">New Arrival</a>
+    <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Ending Soon</a>
+    <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Add to Favourites</a>
+    <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">View Feedback</a>
+    <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Contact Us</a>
+  </div>
+
+  <div class="t3sv3-cols">
+
+    <!-- ===== LEFT SIDEBAR ===== -->
+    <div class="t3sv3-sidebar">
+
+      <div class="t3sv3-sidebox">
+        <div class="t3sv3-sidebox-head">Store Categories</div>
+        <ul class="t3sv3-catlist">
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Brake Pads</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Brake Discs</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Brake Calipers</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Fitting Kits</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Wear Sensors</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Brake Hoses</a></li>
+        </ul>
+      </div>
+
+      <div class="t3sv3-sidebox">
+        <div class="t3sv3-sidebox-head">Why Buy From Us</div>
+        <ul class="t3sv3-why">
+          <li><strong>Free 30 Day</strong>Money Back Guarantee</li>
+          <li><strong>Genuine Quality</strong>At The Lowest Price</li>
+          <li><strong>Free Shipping</strong>Same Day Dispatch</li>
+          <li><strong>Brake Specialists</strong>Fitment Help Included</li>
+        </ul>
+      </div>
+
+      <div class="t3sv3-promo moneyback">FREE 30 DAY<br>MONEY BACK<br>GUARANTEE</div>
+      <div class="t3sv3-promo pay"><span>PayPal</span><span>VISA</span><span>Mastercard</span><span>Discover</span></div>
+      <div class="t3sv3-promo shipping">Free Shipping<br>Same Day Dispatch</div>
+      <div class="t3sv3-promo seal"><span class="t3sv3-rosette">100%<br>SATISFACTION<br>GUARANTEED</span></div>
+
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="t3sv3-main">
+
+      <h1 class="t3sv3-title">${PRODUCT.Title}</h1>
+
+      <!-- Hover gallery -->
+      <div class="t3sv3-gallery">
+        <div class="t3sv3-g-main">
+          <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title}">
+        </div>
+        <div class="t3sv3-g-thumbs">
+          <span class="t3sv3-g-thumb">
+            <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title} - view 1">
+            <span class="t3sv3-zoom"><img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title} - view 1"></span>
+          </span>
+          <span class="t3sv3-g-thumb">
+            <img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.Title} - view 2">
+            <span class="t3sv3-zoom"><img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.Title} - view 2"></span>
+          </span>
+          <span class="t3sv3-g-thumb">
+            <img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.Title} - view 3">
+            <span class="t3sv3-zoom"><img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.Title} - view 3"></span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Items description -->
+      <div class="t3sv3-secbar">Items Description</div>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Item Type:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields Brand} Brake Pads</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Condition:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields Condition}</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Part Number:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields MPN}</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Warranty:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields Warranty}</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Brake System:</span> <span class="t3sv3-avalue red">${PRODUCT.CustomFields BrakeSystem}</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">OE Number:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields OENumbers}</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Description:</span> <span class="t3sv3-avalue">${PRODUCT.Description}</span></p>
+
+      <!-- Vehicle fitment table -->
+      <p class="t3sv3-fitlabel">Vehicle Information:</p>
+      <table class="t3sv3-fittable">
+        <tr>
+          <th>Make</th><th>Model</th><th>Series</th><th>Year</th><th>Type</th><th>Drive Type</th><th>Body Style</th>
+        </tr>
+        <tr>
+          <td colspan="7">${PRODUCT.CustomFields Fitment} &mdash; please confirm with the compatibility checker on this listing before ordering.</td>
+        </tr>
+      </table>
+
+      <!-- Product specifications -->
+      <p class="t3sv3-fitlabel">Product Specifications:</p>
+      <table class="t3sv3-spec">
+        <tr><td>Brand</td><td>${PRODUCT.CustomFields Brand}</td></tr>
+        <tr><td>Part Number</td><td>${PRODUCT.CustomFields MPN}</td></tr>
+        <tr><td>EAN</td><td>${PRODUCT.CustomFields EAN}</td></tr>
+        <tr><td>Product Condition</td><td>${PRODUCT.CustomFields Condition}</td></tr>
+        <tr><td>Fitting Position</td><td>${PRODUCT.CustomFields Position}</td></tr>
+        <tr><td>Width [mm]</td><td>${PRODUCT.CustomFields Width}</td></tr>
+        <tr><td>Height [mm]</td><td>${PRODUCT.CustomFields Height}</td></tr>
+        <tr><td>Thickness [mm]</td><td>${PRODUCT.CustomFields Thickness}</td></tr>
+        <tr><td>Wear Warning Contact</td><td>${PRODUCT.CustomFields WearIndicator}</td></tr>
+        <tr><td>Inspection Tag</td><td>${PRODUCT.CustomFields InspectionTag}</td></tr>
+        <tr><td>Fitment Type</td><td>Direct Replacement</td></tr>
+      </table>
+
+      <!-- Tab row (CSS only) -->
+      <div class="t3sv3-tabs">
+        <input type="radio" name="t3sv3-tabs" id="t3sv3-tab-ship" checked style="display:none;">
+        <input type="radio" name="t3sv3-tabs" id="t3sv3-tab-pay" style="display:none;">
+        <input type="radio" name="t3sv3-tabs" id="t3sv3-tab-terms" style="display:none;">
+        <input type="radio" name="t3sv3-tabs" id="t3sv3-tab-about" style="display:none;">
+        <input type="radio" name="t3sv3-tabs" id="t3sv3-tab-contact" style="display:none;">
+        <div class="t3sv3-tabrow">
+          <label class="t3sv3-tab-label" for="t3sv3-tab-ship">Shipping</label>
+          <label class="t3sv3-tab-label" for="t3sv3-tab-pay">Payment</label>
+          <label class="t3sv3-tab-label" for="t3sv3-tab-terms">Terms of Sale</label>
+          <label class="t3sv3-tab-label" for="t3sv3-tab-about">About Us</label>
+          <label class="t3sv3-tab-label" for="t3sv3-tab-contact">Contact Us</label>
+        </div>
+        <div class="t3sv3-tab-bodies">
+          <div class="t3sv3-tab-body t3sv3-body-ship">
+            <ul>
+              <li><strong>Same day dispatch</strong> before 1:30pm, Monday to Friday</li>
+              <li><strong>Free tracked UK delivery</strong> &mdash; usually delivered within <strong>2 business days</strong></li>
+              <li>Express and next working day options available at checkout</li>
+            </ul>
+          </div>
+          <div class="t3sv3-tab-body t3sv3-body-pay">
+            <ul>
+              <li><strong>Secure payment through eBay checkout</strong> &mdash; all major debit/credit cards and PayPal accepted via eBay&rsquo;s managed payments</li>
+              <li>Payment is due at the time of purchase</li>
+              <li>We never see or store your card details</li>
+            </ul>
+          </div>
+          <div class="t3sv3-tab-body t3sv3-body-terms">
+            <ul>
+              <li>Please check fitment carefully before ordering &mdash; message us your registration and we will confirm</li>
+              <li>Returns accepted within 30 days for faulty items or items in original, pristine condition</li>
+              <li>Please contact us before returning any item</li>
+            </ul>
+          </div>
+          <div class="t3sv3-tab-body t3sv3-body-about">
+            <p>${PRODUCT.CustomFields AboutText}</p>
+          </div>
+          <div class="t3sv3-tab-body t3sv3-body-contact">
+            <p>Questions about fitment or your order? Message us through eBay &mdash; brake parts are all we do, and we reply fast.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="t3sv3-footer">
+    <p>Copyright <strong>3S ONLINE</strong> &mdash; All rights reserved<br>Welcome to 3S ONLINE &mdash; Happy Shopping!</p>
+    <div class="t3sv3-payicons">
+      <span class="t3sv3-lock">Secure</span><span>PayPal</span><span>VISA</span><span>Mastercard</span><span>Discover</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
