@@ -10,16 +10,12 @@
   Two-column motors design: hero banner, pill nav, left sidebar,
   hover gallery, description rows, fitment table, tab row, dark footer.
   =====================================================================
-  SETUP:
-  1. Files are hosted at https://github.com/waleednaeem330-gif/3sonline-ebay-templates
-     and the stylesheet is served live via jsDelivr (link tag below), pinned to an exact commit so the CDN can never serve a stale copy.
-  2. For MIP feed listings, upload this HTML via MIP GUI > Description
-     Templates (or SFTP /store/lookup/template) BEFORE the feed, then set
-     TemplateName=template.html in the feed row and fill CustomFields:
-       CustomFields=Brand=Apec Blue|MPN=PD3005|EAN=5028906056469|Position=Rear Axle|Condition=Brand New|Width=87 mm|Height=53 mm|Thickness=17 mm|BrakeSystem=TRW|WearIndicator=Not prepared|InspectionTag=90R-02A01400/42123|OENumbers=191615415A, 191615415D, 191698451A, 1H0615415|Warranty=25-month / 25,000-mile|Fitment=See the compatibility checker on this listing|Image1=https://...|Image2=https://...|Image3=https://...|AboutText=Your store blurb here
-     Pipe character separates keys (no spaces); commas separate multi-values.
-  3. Merge fields only auto-fill through the MIP feed workflow. Pasted
-     manually into Seller Hub, the ${...} codes show as plain text.
+  PRODUCT: Apec Blue rear brake pad set PD3005 (EAN 5028906056469)
+  All product data below is HARDCODED from eBay listing 880023055144
+  (no merge fields - paste this HTML straight into the Seller Hub description editor).
+  STYLESHEET: served live via jsDelivr (link tag below), pinned to an exact commit
+  so the CDN can never serve a stale copy. If you edit style.css, update the
+  commit SHA in the link tag to the new commit.
 
   Interactivity is pure CSS (hover gallery + :checked tabs).
   No active content of any kind. All URLs must be HTTPS.
@@ -107,38 +103,38 @@
     <!-- ===== MAIN CONTENT ===== -->
     <div class="t3sv3-main">
 
-      <h1 class="t3sv3-title">${PRODUCT.Title}</h1>
+      <h1 class="t3sv3-title">Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415</h1>
 
       <!-- Hover gallery -->
       <div class="t3sv3-gallery">
         <div class="t3sv3-g-main">
-          <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title}">
+          <img src="https://i.ebayimg.com/images/g/kpEAAeSwYmVq0o6s/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415">
         </div>
         <div class="t3sv3-g-thumbs">
           <span class="t3sv3-g-thumb">
-            <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title} - view 1">
-            <span class="t3sv3-zoom"><img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title} - view 1"></span>
+            <img src="https://i.ebayimg.com/images/g/kpEAAeSwYmVq0o6s/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415 - view 1">
+            <span class="t3sv3-zoom"><img src="https://i.ebayimg.com/images/g/kpEAAeSwYmVq0o6s/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415 - view 1"></span>
           </span>
           <span class="t3sv3-g-thumb">
-            <img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.Title} - view 2">
-            <span class="t3sv3-zoom"><img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.Title} - view 2"></span>
+            <img src="https://i.ebayimg.com/images/g/e1MAAeSwRdRq0o2A/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415 - view 2">
+            <span class="t3sv3-zoom"><img src="https://i.ebayimg.com/images/g/e1MAAeSwRdRq0o2A/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415 - view 2"></span>
           </span>
           <span class="t3sv3-g-thumb">
-            <img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.Title} - view 3">
-            <span class="t3sv3-zoom"><img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.Title} - view 3"></span>
+            <img src="https://i.ebayimg.com/images/g/nOQAAeSwBaNq0o1x/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415 - view 3">
+            <span class="t3sv3-zoom"><img src="https://i.ebayimg.com/images/g/nOQAAeSwBaNq0o1x/s-l1600.jpg" alt="Brake Pads Set Rear PD3005 Apec Blue 191615415A 191615415D 191698451A 1H0615415 - view 3"></span>
           </span>
         </div>
       </div>
 
       <!-- Items description -->
       <div class="t3sv3-secbar">Items Description</div>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">Item Type:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields Brand} Brake Pads</span></p>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">Condition:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields Condition}</span></p>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">Part Number:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields MPN}</span></p>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">Warranty:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields Warranty}</span></p>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">Brake System:</span> <span class="t3sv3-avalue red">${PRODUCT.CustomFields BrakeSystem}</span></p>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">OE Number:</span> <span class="t3sv3-avalue">${PRODUCT.CustomFields OENumbers}</span></p>
-      <p class="t3sv3-attr"><span class="t3sv3-alabel">Description:</span> <span class="t3sv3-avalue">${PRODUCT.Description}</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Item Type:</span> <span class="t3sv3-avalue">Apec Blue Brake Pads</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Condition:</span> <span class="t3sv3-avalue">Brand New</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Part Number:</span> <span class="t3sv3-avalue">PD3005</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Warranty:</span> <span class="t3sv3-avalue">25-month / 25,000-mile manufacturer guarantee</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Brake System:</span> <span class="t3sv3-avalue red">TRW</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">OE Number:</span> <span class="t3sv3-avalue">191615415A, 191615415D, 191698451A, 1H0615415</span></p>
+      <p class="t3sv3-attr"><span class="t3sv3-alabel">Description:</span> <span class="t3sv3-avalue">Brand new, boxed Apec Blue rear disc brake pad set &mdash; a direct OE replacement. Apec Blue is the value braking range from Apec Braking, engineered to match original equipment fit and performance. ECE R90 approved (approval tag 90R-02A01400/42123). Fitting position: rear axle. Supplied with fitting spring where applicable. Please check fitment before buying.</span></p>
 
       <!-- Vehicle fitment table -->
       <p class="t3sv3-fitlabel">Vehicle Information:</p>
@@ -148,7 +144,7 @@
           <th>Make</th><th>Model</th><th>Series</th><th>Year</th><th>Type</th><th>Drive Type</th><th>Body Style</th>
         </tr>
         <tr>
-          <td colspan="7">${PRODUCT.CustomFields Fitment} &mdash; please confirm with the compatibility checker on this listing before ordering.</td>
+          <td colspan="7">Compatible with 2,971 vehicles &mdash; please confirm with the compatibility checker on this listing before ordering.</td>
         </tr>
       </table>
       </div>
@@ -156,16 +152,16 @@
       <!-- Product specifications -->
       <p class="t3sv3-fitlabel">Product Specifications:</p>
       <table class="t3sv3-spec">
-        <tr><td>Brand</td><td>${PRODUCT.CustomFields Brand}</td></tr>
-        <tr><td>Part Number</td><td>${PRODUCT.CustomFields MPN}</td></tr>
-        <tr><td>EAN</td><td>${PRODUCT.CustomFields EAN}</td></tr>
-        <tr><td>Product Condition</td><td>${PRODUCT.CustomFields Condition}</td></tr>
-        <tr><td>Fitting Position</td><td>${PRODUCT.CustomFields Position}</td></tr>
-        <tr><td>Width [mm]</td><td>${PRODUCT.CustomFields Width}</td></tr>
-        <tr><td>Height [mm]</td><td>${PRODUCT.CustomFields Height}</td></tr>
-        <tr><td>Thickness [mm]</td><td>${PRODUCT.CustomFields Thickness}</td></tr>
-        <tr><td>Wear Warning Contact</td><td>${PRODUCT.CustomFields WearIndicator}</td></tr>
-        <tr><td>Inspection Tag</td><td>${PRODUCT.CustomFields InspectionTag}</td></tr>
+        <tr><td>Brand</td><td>Apec Blue</td></tr>
+        <tr><td>Part Number</td><td>PD3005</td></tr>
+        <tr><td>EAN</td><td>5028906056469</td></tr>
+        <tr><td>Product Condition</td><td>Brand New</td></tr>
+        <tr><td>Fitting Position</td><td>Rear Axle</td></tr>
+        <tr><td>Width [mm]</td><td>87 mm</td></tr>
+        <tr><td>Height [mm]</td><td>53 mm</td></tr>
+        <tr><td>Thickness [mm]</td><td>17 mm</td></tr>
+        <tr><td>Wear Warning Contact</td><td>Not prepared for wear warning indicator</td></tr>
+        <tr><td>Inspection Tag</td><td>90R-02A01400/42123</td></tr>
         <tr><td>Fitment Type</td><td>Direct Replacement</td></tr>
       </table>
 
@@ -206,7 +202,7 @@
             </ul>
           </div>
           <div class="t3sv3-tab-body t3sv3-body-about">
-            <p>${PRODUCT.CustomFields AboutText}</p>
+            <p>3S ONLINE is a UK brake parts specialist &mdash; braking components are all we sell. Every order is checked against your vehicle before dispatch, sent same day when ordered before 1:30pm (Monday to Friday), and covered by our 30-day money-back promise. Benefit to the customer, in every parcel.</p>
             <p><a target="_blank" href="https://www.ebay.co.uk/str/3sonline?_tab=about">Read more on our About page</a></p>
           </div>
           <div class="t3sv3-tab-body t3sv3-body-contact">
