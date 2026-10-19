@@ -195,11 +195,6 @@
   gap:12px;
 }
 .t3sv3-footer p{margin:0;font-size:13px;line-height:1.7;}
-.t3sv3-payicons .t3sv3-lock{
-  display:inline-block;background:#ffffff;color:#222222;font-size:11px;font-weight:bold;
-  border-radius:4px;padding:5px 10px;margin:2px;vertical-align:middle;
-}
-.t3sv3-payicons .t3sv3-lock{background:#2e8b2e;color:#ffffff;}
 
 /* ---------- Trust badges (sidebar) ---------- */
 .t3sv3-trustbadges{margin:2px 0 12px 0;}
@@ -234,6 +229,7 @@
   /* categories + trust */
   .t3sv3-cats{padding:6px 14px 0 14px;}
   .t3sv3-catcard{min-width:30%;}
+  .t3sv3-caticon{height:92px;}
   .t3sv3-caticon svg{width:56px;height:56px;}
   .t3sv3-truststrip{margin:20px 14px 0 14px;}
   .t3sv3-trust{min-width:46%;}
@@ -255,11 +251,11 @@
 }
 .t3sv3-cats-head::after{content:"";position:absolute;left:0;bottom:-1px;width:150px;height:3px;background:#cf1f2e;}
 .t3sv3-catgrid{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
-.t3sv3-catcard{flex:1;min-width:110px;text-align:center;text-decoration:none;}
-.t3sv3-caticon{border:1px solid #e0e0e0;border-radius:2px;padding:16px 8px;background:#ffffff;}
-.t3sv3-caticon svg{width:70px;height:70px;}
+.t3sv3-catcard{flex:1;min-width:110px;text-align:center;text-decoration:none;display:flex;flex-direction:column;}
+.t3sv3-caticon{border:1px solid #e0e0e0;border-radius:2px;background:#ffffff;height:110px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;}
+.t3sv3-caticon svg{width:70px;height:70px;flex:0 0 auto;}
 .t3sv3-catcard:hover .t3sv3-caticon{border-color:#cf1f2e;}
-.t3sv3-catname{display:block;color:#555555;font-size:12px;font-weight:bold;letter-spacing:1px;margin-top:10px;}
+.t3sv3-catname{display:block;color:#555555;font-size:12px;font-weight:bold;letter-spacing:1px;margin-top:10px;min-height:30px;}
 .t3sv3-truststrip{
   display:flex;flex-wrap:wrap;gap:10px;
   border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;
