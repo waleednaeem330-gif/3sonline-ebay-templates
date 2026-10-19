@@ -80,17 +80,6 @@
 .t3sv3-why strong{display:block;color:#111111;}
 
 /* Sidebar promo boxes (pure CSS, replace banner graphics) */
-.t3sv3-promo{border-radius:6px;padding:14px 10px;text-align:center;margin-bottom:12px;font-weight:bold;}
-.t3sv3-promo.moneyback{background:linear-gradient(135deg,#1a1a1a 0%,#0e86a0 60%,#f5a623 130%);color:#ffffff;font-size:13px;line-height:1.6;}
-.t3sv3-promo.pay{background:#ffffff;border:1px solid #d7dde2;font-size:11px;color:#555555;}
-.t3sv3-promo.pay span{display:inline-block;background:#eef1f4;border-radius:4px;padding:4px 8px;margin:3px;font-style:italic;font-weight:bold;color:#003087;}
-.t3sv3-promo.shipping{background:linear-gradient(180deg,#2b9fd8 0%,#166e92 100%);color:#ffffff;font-size:14px;line-height:1.7;}
-.t3sv3-promo.seal{background:#ffffff;border:2px solid #0e86a0;}
-.t3sv3-promo.seal .t3sv3-rosette{
-  display:inline-block;background:radial-gradient(circle,#2b9fd8 0%,#166e92 75%);
-  color:#ffffff;border-radius:50%;width:110px;height:110px;
-  font-size:11px;line-height:1.5;padding:22px 10px;box-sizing:border-box;
-}
 
 /* ---------- Title ---------- */
 .t3sv3-title{
@@ -206,11 +195,18 @@
   gap:12px;
 }
 .t3sv3-footer p{margin:0;font-size:13px;line-height:1.7;}
-.t3sv3-payicons span{
+.t3sv3-payicons .t3sv3-lock{
   display:inline-block;background:#ffffff;color:#222222;font-size:11px;font-weight:bold;
-  border-radius:4px;padding:5px 10px;margin:2px;
+  border-radius:4px;padding:5px 10px;margin:2px;vertical-align:middle;
 }
 .t3sv3-payicons .t3sv3-lock{background:#2e8b2e;color:#ffffff;}
+
+/* ---------- Trust badges (sidebar) ---------- */
+.t3sv3-trustbadges{margin:2px 0 12px 0;}
+.t3sv3-trustbadges img{width:100%;height:auto;display:block;border-radius:4px;}
+
+/* ---------- Payment brand icons (footer) ---------- */
+.t3sv3-payicons .t3sv3-paybadge{width:52px;height:35px;margin:2px;vertical-align:middle;}
 
 /* ---------- Responsive ---------- */
 /* ---------- Responsive ---------- */
