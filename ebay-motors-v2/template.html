@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3S ONLINE - eBay Motors Template v2</title>
+<!--
+  =====================================================================
+  3S ONLINE - eBay Motors Template v2 (external stylesheet version)
+  =====================================================================
+  SETUP:
+  1. Push this folder to your GitHub repo and enable GitHub Pages
+     (repo Settings > Pages > Deploy from branch).
+  2. The stylesheet link below points at the live jsDelivr CDN URL:
+     https://cdn.jsdelivr.net/gh/waleednaeem330-gif/3sonline-ebay-templates@main/ebay-motors-v2/css/style.css
+     (Repo: https://github.com/waleednaeem330-gif/3sonline-ebay-templates)
+  3. For MIP feed listings, upload this HTML via MIP GUI > Description
+     Templates (or SFTP /store/lookup/template) BEFORE the feed, then set
+     TemplateName=template.html in the feed row and fill CustomFields:
+       CustomFields=Brand=Apec Blue|MPN=PD3005|EAN=5028906056469|Position=Rear Axle|Width=87 mm|Height=53 mm|Thickness=17 mm|BrakeSystem=TRW|WearIndicator=Not prepared|InspectionTag=90R-02A01400/42123|Warranty=25-month / 25,000-mile|Features=OE matching quality,ECE R90 approved,Direct replacement,Supplied with fitting spring|Fitment=Audi A3/A4/A6/TT, VW Golf, Seat Leon, Skoda Octavia + more - see compatibility tab|Image1=https://...|Image2=https://...|Image3=https://...|Image4=https://...|AboutText=Your store blurb here
+     Pipe character separates keys (no spaces); commas separate multi-values.
+  4. Merge fields only auto-fill through the MIP feed workflow. Pasted
+     manually into Seller Hub, the ${...} codes show as plain text.
+
+  Interactivity is pure CSS (hover gallery + :checked accordion tabs).
+  No active content of any kind. All URLs must be HTTPS.
+  =====================================================================
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/waleednaeem330-gif/3sonline-ebay-templates@main/ebay-motors-v2/css/style.css">
+</head>
+<body style="margin:0;padding:0;background:#f4f6f8;">
+
+<div class="t3s-wrap">
+
+  <!-- ===== TOP UTILITY BAR ===== -->
+  <div class="t3s-topbar">
+    <div class="t3s-topbar-inner">
+      <span><strong>Same day dispatch</strong> before 1:30pm, Mon&ndash;Fri</span>
+      <span><strong>Free</strong> tracked UK delivery</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="t3s-header">
+    <div class="t3s-logo">
+      <img src="https://i.ebayimg.com/images/g/WMgAAeSwcR5q0ooe/s-l1600.jpg" alt="3S ONLINE - Benefit to the Customer">
+    </div>
+    <!-- EDIT: replace these links with your own store URLs -->
+    <div class="t3s-nav">
+      <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">SHOP</a>
+      <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">ABOUT US</a>
+      <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">FEEDBACK</a>
+      <a target="_blank" href="https://www.ebay.co.uk/str/3sonline">CONTACT</a>
+    </div>
+  </div>
+  <div class="t3s-accent">&nbsp;</div>
+
+  <!-- ===== TITLE ===== -->
+  <div class="t3s-titleblock">
+    <h1>${PRODUCT.Title}</h1>
+    <p class="t3s-meta">${PRODUCT.CustomFields Brand} &nbsp;|&nbsp; Part No: <strong>${PRODUCT.CustomFields MPN}</strong> &nbsp;|&nbsp; EAN: ${PRODUCT.CustomFields EAN}</p>
+  </div>
+
+  <!-- ===== MAIN: GALLERY + INFO ===== -->
+  <div class="t3s-main">
+
+    <!-- Hover gallery: hover a thumbnail to preview it large -->
+    <div class="t3s-gallery">
+      <div class="t3s-g-main">
+        <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title}">
+      </div>
+      <div class="t3s-g-thumbs">
+        <span class="t3s-g-thumb">
+          <img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title} - view 1">
+          <span class="t3s-zoom"><img src="${PRODUCT.CustomFields Image1}" alt="${PRODUCT.Title} - view 1"></span>
+        </span>
+        <span class="t3s-g-thumb">
+          <img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.Title} - view 2">
+          <span class="t3s-zoom"><img src="${PRODUCT.CustomFields Image2}" alt="${PRODUCT.Title} - view 2"></span>
+        </span>
+        <span class="t3s-g-thumb">
+          <img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.Title} - view 3">
+          <span class="t3s-zoom"><img src="${PRODUCT.CustomFields Image3}" alt="${PRODUCT.Title} - view 3"></span>
+        </span>
+        <span class="t3s-g-thumb">
+          <img src="${PRODUCT.CustomFields Image4}" alt="${PRODUCT.Title} - view 4">
+          <span class="t3s-zoom"><img src="${PRODUCT.CustomFields Image4}" alt="${PRODUCT.Title} - view 4"></span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Key info -->
+    <div class="t3s-info">
+      <div class="t3s-dispatch">Same day dispatch before 1:30pm, Mon&ndash;Fri</div>
+      <table class="t3s-ataglance">
+        <tr><td>Brand</td><td>${PRODUCT.CustomFields Brand}</td></tr>
+        <tr><td>Part Number</td><td>${PRODUCT.CustomFields MPN}</td></tr>
+        <tr><td>Position</td><td>${PRODUCT.CustomFields Position}</td></tr>
+        <tr><td>Warranty</td><td>${PRODUCT.CustomFields Warranty}</td></tr>
+      </table>
+      <ul class="t3s-features">
+        <li>OE matching quality, direct replacement</li>
+        <li>ECE R90 approved braking performance</li>
+        <li>Precision fit &ndash; first-time fitting</li>
+      </ul>
+      <div class="t3s-fitbox">
+        <strong>Check fitment first.</strong> Use the compatibility checker on this listing or send us your registration &ndash; we confirm fitment before you buy.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ACCORDION TABS (CSS only) ===== -->
+  <div class="t3s-tabs">
+
+    <input type="radio" name="t3s-tabs" id="t3s-tab-desc" class="t3s-tab-input" checked style="display:none;">
+    <label class="t3s-tab-label" for="t3s-tab-desc">DESCRIPTION <span class="t3s-plus">+</span></label>
+    <div class="t3s-tab-body">
+      <p>${PRODUCT.Description}</p>
+    </div>
+
+    <input type="radio" name="t3s-tabs" id="t3s-tab-spec" class="t3s-tab-input" style="display:none;">
+    <label class="t3s-tab-label" for="t3s-tab-spec">SPECIFICATIONS <span class="t3s-plus">+</span></label>
+    <div class="t3s-tab-body">
+      <table class="t3s-spec">
+        <tr><td>Brand</td><td>${PRODUCT.CustomFields Brand}</td></tr>
+        <tr><td>Part Number</td><td>${PRODUCT.CustomFields MPN}</td></tr>
+        <tr><td>EAN</td><td>${PRODUCT.CustomFields EAN}</td></tr>
+        <tr><td>Fitting Position</td><td>${PRODUCT.CustomFields Position}</td></tr>
+        <tr><td>Width</td><td>${PRODUCT.CustomFields Width}</td></tr>
+        <tr><td>Height</td><td>${PRODUCT.CustomFields Height}</td></tr>
+        <tr><td>Thickness</td><td>${PRODUCT.CustomFields Thickness}</td></tr>
+        <tr><td>Brake System</td><td>${PRODUCT.CustomFields BrakeSystem}</td></tr>
+        <tr><td>Wear Indicator</td><td>${PRODUCT.CustomFields WearIndicator}</td></tr>
+        <tr><td>Inspection Tag</td><td>${PRODUCT.CustomFields InspectionTag}</td></tr>
+        <tr><td>Warranty</td><td>${PRODUCT.CustomFields Warranty}</td></tr>
+      </table>
+    </div>
+
+    <input type="radio" name="t3s-tabs" id="t3s-tab-fit" class="t3s-tab-input" style="display:none;">
+    <label class="t3s-tab-label" for="t3s-tab-fit">VEHICLE FITMENT <span class="t3s-plus">+</span></label>
+    <div class="t3s-tab-body">
+      <p>${PRODUCT.CustomFields Fitment}</p>
+      <p>Always confirm with the compatibility checker on this listing or your vehicle registration before ordering. Fitting position: ${PRODUCT.CustomFields Position}.</p>
+    </div>
+
+    <input type="radio" name="t3s-tabs" id="t3s-tab-del" class="t3s-tab-input" style="display:none;">
+    <label class="t3s-tab-label" for="t3s-tab-del">DELIVERY <span class="t3s-plus">+</span></label>
+    <div class="t3s-tab-body">
+      <ul>
+        <li><strong>Same day dispatch</strong> before 1:30pm, Monday to Friday</li>
+        <li><strong>Free tracked UK delivery</strong> &ndash; usually 1&ndash;3 working days</li>
+        <li>Express / next working day options available at checkout</li>
+      </ul>
+    </div>
+
+    <input type="radio" name="t3s-tabs" id="t3s-tab-pay" class="t3s-tab-input" style="display:none;">
+    <label class="t3s-tab-label" for="t3s-tab-pay">PAYMENTS <span class="t3s-plus">+</span></label>
+    <div class="t3s-tab-body">
+      <ul>
+        <li><strong>Secure payment through eBay checkout</strong> &ndash; all major debit/credit cards and PayPal accepted via eBay&rsquo;s managed payments</li>
+        <li>Payment is due at the time of purchase &ndash; orders dispatch once payment has cleared</li>
+        <li>We never see or store your card details</li>
+      </ul>
+    </div>
+
+    <input type="radio" name="t3s-tabs" id="t3s-tab-ret" class="t3s-tab-input" style="display:none;">
+    <label class="t3s-tab-label" for="t3s-tab-ret">RETURNS <span class="t3s-plus">+</span></label>
+    <div class="t3s-tab-body">
+      <ul>
+        <li>Please contact us before returning any item</li>
+        <li>Returns accepted for genuinely faulty items, or items still in original, pristine condition</li>
+        <li>All returns must be raised within 30 days of dispatch</li>
+        <li>Refunds/replacements processed within 2 working days of receiving the return</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ===== TRUST BADGES ===== -->
+  <div class="t3s-trust">
+    <div class="t3s-trust-item"><strong>Fast Dispatch</strong><span>Same day before 1:30pm</span></div>
+    <div class="t3s-trust-item"><strong>Fitment Checked</strong><span>Send your reg, we confirm</span></div>
+    <div class="t3s-trust-item"><strong>Quality Parts</strong><span>ECE R90 approved</span></div>
+    <div class="t3s-trust-item"><strong>Easy Returns</strong><span>30-day policy</span></div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="t3s-footer">
+    <div class="t3s-footer-cols">
+      <div class="t3s-footer-col">
+        <h4>ABOUT 3S ONLINE</h4>
+        <p>${PRODUCT.CustomFields AboutText}</p>
+      </div>
+      <div class="t3s-footer-col">
+        <h4>USEFUL LINKS</h4>
+        <ul>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Shop all items</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">About us</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Feedback</a></li>
+          <li><a target="_blank" href="https://www.ebay.co.uk/str/3sonline">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="t3s-footer-col">
+        <h4>CUSTOMER CARE</h4>
+        <p>Questions about fitment or your order? Message us through eBay and we&rsquo;ll be happy to help &ndash; brake parts are all we do.</p>
+      </div>
+    </div>
+    <div class="t3s-copyright">&copy; 2026 <strong>3S ONLINE</strong> &ndash; Benefit to the Customer. All rights reserved.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
