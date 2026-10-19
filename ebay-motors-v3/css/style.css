@@ -153,6 +153,10 @@
 }
 .t3sv3-fittable tr:nth-child(even) td{background:#f7f7f7;}
 
+/* ---------- Responsive table wrapper ---------- */
+.t3sv3-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.t3sv3-fittable{min-width:620px;}
+
 /* ---------- Spec table ---------- */
 .t3sv3-spec{width:100%;border-collapse:collapse;font-size:13px;}
 .t3sv3-spec td{border:1px solid #cccccc;padding:8px 10px;}
@@ -209,19 +213,42 @@
 .t3sv3-payicons .t3sv3-lock{background:#2e8b2e;color:#ffffff;}
 
 /* ---------- Responsive ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width:720px){
+  /* layout */
   .t3sv3-cols{flex-direction:column;}
-  .t3sv3-main{order:-1;}
-  .t3sv3-sidebar{width:auto;flex:1 1 auto;}
-  .t3sv3-hero-body{flex-direction:column;}
-  .t3sv3-hero-text{align-items:center;text-align:center;padding:34px 20px;}
-  .t3sv3-hero-text h2{font-size:36px;}
-  .t3sv3-slides{min-height:260px;}
-  .t3sv3-hero-top{justify-content:center;text-align:center;}
+  .t3sv3-main{order:-1;padding:14px 14px;}
+  .t3sv3-sidebar{width:auto;flex:1 1 auto;padding:12px 10px;}
+  /* hero */
+  .t3sv3-hero-top{justify-content:center;text-align:center;padding:18px 16px 14px 16px;}
+  .t3sv3-hero-logo img{height:44px;}
+  .t3sv3-hero-nav{font-size:11px;}
   .t3sv3-hero-nav span{margin:0 7px;}
+  .t3sv3-hero-body{flex-direction:column;}
+  .t3sv3-hero-text{align-items:center;text-align:center;padding:30px 18px;}
+  .t3sv3-hero-text h2{font-size:34px;}
+  .t3sv3-hero-text p{letter-spacing:3px;}
+  .t3sv3-slides{min-height:240px;}
+  /* content */
   .t3sv3-title{font-size:18px;}
-  .t3sv3-fittable{font-size:11px;}
+  .t3sv3-secbar{font-size:14px;}
   .t3sv3-tab-label{padding:8px 10px;font-size:12px;margin-bottom:4px;border-radius:6px;}
+  .t3sv3-tab-bodies{padding:12px;font-size:13px;}
+  .t3sv3-g-thumbs{flex-wrap:wrap;}
+  /* categories + trust */
+  .t3sv3-cats{padding:6px 14px 0 14px;}
+  .t3sv3-catcard{min-width:30%;}
+  .t3sv3-caticon svg{width:56px;height:56px;}
+  .t3sv3-truststrip{margin:20px 14px 0 14px;}
+  .t3sv3-trust{min-width:46%;}
+  /* footer */
+  .t3sv3-footer{justify-content:center;text-align:center;}
+}
+@media (max-width:420px){
+  .t3sv3-hero-text h2{font-size:28px;}
+  .t3sv3-catcard{min-width:44%;}
+  .t3sv3-trust{min-width:100%;}
+  .t3sv3-dots{right:10px;bottom:10px;}
 }
 
 /* ---------- Categories + trust strip ---------- */
@@ -246,6 +273,3 @@
 .t3sv3-trust svg{width:44px;height:44px;flex:0 0 44px;}
 .t3sv3-trust strong{display:block;color:#cf1f2e;font-size:13px;letter-spacing:1px;}
 .t3sv3-trust small{color:#777777;font-size:12px;}
-@media (max-width:720px){
-  .t3sv3-catcard{min-width:30%;}
-}
