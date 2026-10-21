@@ -12,7 +12,7 @@
   design language - tricolour speed bar, gradient hero with CSS pill
   shapes, gradient icon chips and active tab.
 
-  Layout: utility bar, logo header + store nav, tricolour bar, hero,
+  Layout: utility bar, logo header + store nav, tricolour bar, banner slider (CSS autoplay),
   marquee, click gallery + price/specs, feature grid, description panel, fitment table + reg-plate box, category grid,
   CSS-only tabs, dark footer with payment chips.
 
@@ -53,35 +53,14 @@
 /* tricolour speed bar - the three pills as a signature strip */
 #mm5 .tribar{ height:7px; background:linear-gradient(90deg,var(--m5-red) 0%,var(--m5-orange) 22%,var(--m5-navy) 45%,var(--m5-mid) 60%,var(--m5-blue) 82%,#38B6FF 100%); }
 
-/* store banner */
-#mm5 .store-banner{ margin:18px 0 0; }
-#mm5 .store-banner a{ display:block; }
-#mm5 .store-banner img{ width:100%; display:block; border-radius:14px; box-shadow:0 10px 26px rgba(0,10,61,.14); }
-/* hero */
-#mm5 .hero{ position:relative; background:linear-gradient(120deg,var(--m5-navy) 0%,var(--m5-mid) 55%,#003A8C 100%); color:#fff; overflow:hidden; }
-#mm5 .hero-pills{ position:absolute; right:-30px; top:-40px; width:340px; height:340px; opacity:.16; transform:rotate(24deg); }
-#mm5 .hero-pills i{ position:absolute; display:block; width:74px; height:300px; border-radius:999px; }
-#mm5 .hero-pills i.p1{ left:0; background:linear-gradient(180deg,var(--m5-orange),var(--m5-red)); }
-#mm5 .hero-pills i.p2{ left:96px; background:#0B2A6B; }
-#mm5 .hero-pills i.p3{ left:192px; background:linear-gradient(180deg,#38B6FF,var(--m5-blue)); }
-#mm5 .hero-in{ position:relative; display:flex; align-items:center; gap:34px; padding:38px 34px; text-align:left; }
-#mm5 .hero-txt{ flex:1 1 52%; }
-#mm5 .eyebrow{ display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.35); color:#DCE8FF; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:6px 12px; border-radius:999px; margin-bottom:14px; }
-#mm5 .hero h2{ margin:0 0 10px; font-size:40px; line-height:1.08; font-weight:900; text-transform:uppercase; }
-#mm5 .hero h2 .grad{ background:linear-gradient(90deg,#FF7A18,var(--m5-red) 45%,#38B6FF); -webkit-background-clip:text; background-clip:text; color:transparent; }
-#mm5 .hero p{ margin:0 0 20px; color:#C9D6F5; font-size:15px; max-width:480px; }
-#mm5 .hero-btns{ display:flex; gap:12px; flex-wrap:wrap; }
-#mm5 .btn{ display:inline-block; font-weight:800; font-size:13px; letter-spacing:.6px; text-transform:uppercase; padding:13px 22px; border-radius:999px; }
-#mm5 .btn-red{ background:linear-gradient(90deg,var(--m5-red),var(--m5-orange)); color:#fff; box-shadow:0 6px 18px rgba(230,0,35,.4); }
-#mm5 .btn-ghost{ border:2px solid rgba(255,255,255,.55); color:#fff; }
-#mm5 .btn-ghost:hover{ background:rgba(255,255,255,.12); }
-#mm5 .hero-img{ flex:1 1 42%; position:relative; }
-#mm5 .hero-img .frame{ border-radius:16px; overflow:hidden; border:3px solid rgba(255,255,255,.25); box-shadow:0 18px 40px rgba(0,0,0,.4); }
-#mm5 .hero-img img{ width:100%; height:100%; object-fit:cover; }
-#mm5 .chip{ position:absolute; background:#fff; color:var(--m5-navy); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.4px; padding:8px 13px; border-radius:999px; box-shadow:0 8px 20px rgba(0,0,0,.3); display:inline-flex; align-items:center; gap:6px; }
-#mm5 .chip i{ width:8px; height:8px; border-radius:50%; display:inline-block; }
-#mm5 .chip-a{ top:14px; left:-12px; } #mm5 .chip-a i{ background:var(--m5-red); }
-#mm5 .chip-b{ bottom:14px; right:-8px; } #mm5 .chip-b i{ background:var(--m5-blue); }
+/* banner slider - CSS-only autoplay crossfade (no JavaScript, eBay-safe) */
+#mm5 .bslider{ position:relative; margin:18px 0 0; border-radius:14px; overflow:hidden; box-shadow:0 10px 26px rgba(0,10,61,.14); background:#fff; }
+#mm5 .bs-track{ position:relative; padding-top:37.5%; }
+#mm5 .bs-slide{ position:absolute; top:0; right:0; bottom:0; left:0; opacity:0; animation:mm5fade 15s linear infinite; }
+#mm5 .bs-slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+#mm5 .bs-slide.s2{ animation-delay:5s; }
+#mm5 .bs-slide.s3{ animation-delay:10s; }
+@keyframes mm5fade{ 0%{opacity:0} 4%{opacity:1} 33%{opacity:1} 38%{opacity:0} 100%{opacity:0} }
 
 /* marquee */
 #mm5 .marquee{ background:linear-gradient(90deg,var(--m5-red),var(--m5-orange)); color:#fff; overflow:hidden; white-space:nowrap; padding:8px 0; }
@@ -220,11 +199,6 @@
   #mm5 .catgrid{ grid-template-columns:repeat(3,1fr); }
   #mm5 .cats{ padding:22px 16px 2px; }
   #mm5 .tabs{ margin:22px 16px 0; }
-  #mm5 .hero-in{ flex-direction:column; padding:26px 18px; text-align:center; }
-  #mm5 .hero p{ margin-left:auto; margin-right:auto; }
-  #mm5 .hero-btns{ justify-content:center; }
-  #mm5 .hero-img{ width:100%; }
-  #mm5 .chip-a{ left:6px; } #mm5 .chip-b{ right:6px; }
   #mm5 .head{ flex-direction:column; padding:14px 12px; }
   #mm5 .head .logo{ max-width:78%; width:300px; }
   #mm5 .nav{ justify-content:center; }
@@ -232,7 +206,6 @@
   #mm5 .foot-in, #mm5 .payrow{ padding-left:18px; padding-right:18px; }
 }
 @media only screen and (max-width:520px){
-  #mm5 .hero h2{ font-size:29px; }
   #mm5 h1.title{ font-size:22px; }
   #mm5 .catgrid{ grid-template-columns:repeat(2,1fr); }
   #mm5 .quick{ grid-template-columns:1fr; }
@@ -266,29 +239,12 @@
   </div>
   <div class="tribar"></div>
 
-  <!-- store banner -->
-  <div class="store-banner"><a href="https://www.ebay.co.uk/str/3sonline" target="_blank"><img src="https://lh3.googleusercontent.com/d/1Y2WnIR1KegIempYbAWPk3xkJgUkeZgmn" alt="Motion Mix - Quality Car Parts"></a></div>
-
-  <!-- hero -->
-  <div class="hero">
-    <div class="hero-pills"><i class="p1"></i><i class="p2"></i><i class="p3"></i></div>
-    <div class="hero-in">
-      <div class="hero-txt">
-        <span class="eyebrow">Motion Mix &bull; Braking Specialists</span>
-        <h2>Premium Braking.<br><span class="grad">Perfect Fit.</span></h2>
-        <p>OE-matching brake parts, checked against your vehicle before dispatch &mdash; order by 1:30pm and your part leaves the same day.</p>
-        <div class="hero-btns">
-          <a class="btn btn-red" href="#mm5-fit">Check Your Fitment</a>
-          <a class="btn btn-ghost" href="https://www.ebay.co.uk/cnt/intermediatedFAQ?requested=3sonline" target="_blank">Ask a Question</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <div class="frame"><img src="https://lh3.googleusercontent.com/d/1BU-KSir65BD3wlC0WNk1Zwa0v9YJ_0X1" alt="Performance brake discs and pads"></div>
-        <span class="chip chip-a"><i></i> ECE R90 Approved</span>
-        <span class="chip chip-b"><i></i> Fitment Checked</span>
-      </div>
-    </div>
-  </div>
+  <!-- banner slider (autoplay, CSS-only) -->
+  <div class="bslider"><div class="bs-track">
+    <a class="bs-slide s1" href="https://www.ebay.co.uk/str/3sonline" target="_blank"><img src="https://lh3.googleusercontent.com/d/1Y2WnIR1KegIempYbAWPk3xkJgUkeZgmn" alt="Motion Mix - Quality Car Parts"></a>
+    <a class="bs-slide s2" href="https://www.ebay.co.uk/str/3sonline" target="_blank"><img src="https://lh3.googleusercontent.com/d/1lkLdwd3Q5bhweOROEIgDDw4Rts1sz1x_" alt="Motion Mix - All Car Parts"></a>
+    <a class="bs-slide s3" href="https://www.ebay.co.uk/str/3sonline" target="_blank"><img src="https://lh3.googleusercontent.com/d/1-nZO05mek_hHCGPVaGBsYSO1QqiWp53l" alt="Motion Mix - Car Parts Range"></a>
+  </div></div>
 
   <!-- marquee -->
   <div class="marquee"><div class="marquee-track">
