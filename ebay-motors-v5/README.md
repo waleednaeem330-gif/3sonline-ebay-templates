@@ -11,6 +11,7 @@ Utility bar (UK Seller / 1:30pm dispatch / free tracked delivery / 30-day return
 - Header logo: `1HmFdTo9_Oeyvq6jwNEBYuH24M3tvJJfr` (motion-mix-logo.png)
 - Footer pills icon: `1RrEmFr0u-Vnc3lQzk0ZL9YLRpyuEs4hR` (motion-mix-icon.png)
 - Hero brake discs: `1BU-KSir65BD3wlC0WNk1Zwa0v9YJ_0X1`
+- Store banner (added 21 Oct 2026 at Waleed's request): `1Y2WnIR1KegIempYbAWPk3xkJgUkeZgmn` (mm-banner-pile-sky.jpg — the sky-background "Quality Car Parts" pile banner) shown full-width between the header and the hero, linked to the store home.
 - Gallery: the PD3005 listing's 3 eBay images (i.ebayimg.com)
 
 ## Data & policies
